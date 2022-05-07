@@ -450,6 +450,72 @@ font-size: 1.4rem;
 .post-type__item .fa-laugh-beam{
     color: var(--fb-yellow);
 }
+.video__chat-box{
+    display: flex;
+    justify-content:space-between;
+    padding-left:25px;
+    align-items: center;
+    background: var(--fb-white); 
+    max-width: 700px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    margin-bottom: 20px; 
+    padding: 30px;
+}
+.video__create-room{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 20px;
+    padding: inherit;
+    width: fit-content;
+    cursor: pointer;
+}
+.video__chat-box :hover{
+    background: var(--button-link);
+}
+.video__chat-friends:hover{
+background: none;
+}
+.video__create-room i{
+   margin-right: 10px;
+   color: var(--fb-blue);
+}
+.video__title{
+color:rgb(255, 103, 255);
+font-weight: 700;
+font-style: border;
+}
+.video__chat-friends{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.video__chat-img{
+    border-radius: 50%;
+height: 40px;
+width: 40px;
+margin-right: 20px;
+object-fit: cover;
+object-position: center;
+}
+.video__active-bubble{
+    background: var(--fb-green);
+border: 1.2px solid var(--fb-white);
+display: flex;
+justify-content: center;
+align-items: center;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+position: relative;
+top: 13px;
+right: 30px;
+}
+
 .photopost{
     padding: 0 0 20px;
     margin-bottom: 20px;
@@ -711,6 +777,7 @@ margin-bottom: 20px;
         z-index: 9;
         padding-bottom: 20px;
         overflow-x:scroll ;
+        margin-bottom: 20px;
     }
     .stories__video-container{
         flex: 1 0 auto;
@@ -721,13 +788,31 @@ margin-bottom: 20px;
     .container{
         width: 100%;
     }
+    .video__chat-box{
+        
+        width: 100%;
+        flex-wrap: nowrap;
+        z-index: 9;
+        padding-bottom: 20px;
+        overflow-x:scroll ;
+    }
+    
+    
 }
-@media only screen and (max-width:411px){
+@media only screen and (max-width:500px){
     .header__account{
         display:none;
     }
     .post-types__title{
         display: none;
+    }
+    .video__chat-box{
+        display: none;
+        width: 100%;
+        flex-wrap: nowrap;
+        z-index: 9;
+        padding-bottom: 20px;
+        overflow-x:scroll ;
     }
     
 }
